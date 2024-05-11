@@ -1,9 +1,17 @@
 function hoverParent(element) {
-  element.parentNode.classList.add('cards__item--hover');
+  if (element.classList.contains('cards__btn')) {
+    element.parentNode.classList.add('cards__item--hover');
+  } else if (element.classList.contains('info__link')) {
+    element.parentNode.classList.add('info__item--hover');
+  }
 }
 
 function notHoverParent(element) {
-  element.parentNode.classList.remove('cards__item--hover');
+  if (element.classList.contains('cards__btn')) {
+    element.parentNode.classList.remove('cards__item--hover');
+  } else if (element.classList.contains('info__link')) {
+    element.parentNode.classList.remove('info__item--hover');
+  }
 }
 
 const burger = document.querySelector('.logo-box__burger');

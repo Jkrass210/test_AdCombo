@@ -81,6 +81,7 @@ body {
 
 .overlay {
   position: fixed;
+  z-index: 1;
   bottom: -100%;
   left: 0;
   width: 100%;
@@ -104,7 +105,7 @@ body {
 
 .header {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   background-color: var(--color-header);
   padding-top: 20px;
   padding-bottom: 25px;
@@ -513,6 +514,16 @@ body {
   color: var(--color-header);
 }
 
+.desc-bottom__link:focus {
+  outline: none;
+}
+
+.desc-bottom__link:focus,
+.desc-bottom__link:hover,
+.desc-bottom__link:active {
+  text-decoration: underline;
+}
+
 .price__btn {
   display: none;
 }
@@ -590,6 +601,11 @@ body {
   position: relative;
   border-radius: 50%;
   background-color: var(--color-bacNavCard);
+  transition: background-color 0.4s ease-in-out; 
+}
+
+.info__item--hover {
+  background-color: var(--color-bacSale);
 }
 
 .info__link {
@@ -601,6 +617,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.info__link:focus { 
+  outline: none;
 }
 
 .info__comment {
